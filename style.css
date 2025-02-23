@@ -5,7 +5,7 @@ body {
   align-items: center;
   height: 100vh;
   margin: 0;
-  background-color: #192433; 
+  background-color: #192433;
 }
 .container {
   text-align: center;
@@ -18,15 +18,18 @@ body {
   border: 2px solid #045860;
 }
 h1 {
-  color: #331F19;
+  color: #331f19;
+  font-style: italic;
+  font-size: 40px;
 }
-p {
-  color: #331F19;
-  font-size: 1.1em;
+.indica {
+  color: #170803;
+  font-size: 25px;
+  font-style: oblique;
 }
 button {
   background-color: #045860;
-  color: #F4F0EA;
+  color: #f4f0ea;
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
@@ -36,7 +39,7 @@ button {
   margin-top: 10px;
 }
 button:hover {
-  background-color: #A34743;
+  background-color: #a34743;
 }
 ul {
   list-style: none;
@@ -44,8 +47,8 @@ ul {
   margin-top: 20px;
 }
 ul li {
-  background-color: #F4F0EA;
-  color: #331F19;
+  background-color: #f4f0ea;
+  color: #331f19;
   padding: 10px;
   margin: 5px 0;
   border-radius: 5px;
@@ -59,7 +62,7 @@ input[type="text"] {
   max-width: 500px;
   margin-top: 10px;
   margin-bottom: 10px;
-  border: 2px solid #8B7D70;
+  border: 2px solid #8b7d70;
   border-radius: 5px;
   font-size: 1em;
   box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -67,45 +70,60 @@ input[type="text"] {
   transition: border-color 0.3s ease;
 }
 input[type="text"]:focus {
-  border-color: #60041A;
+  border-color: #60041a;
   box-shadow: inset 0 2px 4px rgba(96, 4, 26, 0.3);
 }
 
-button.botaoExcluir{
-    background-color: #A34743;
-    color: #F4F0EA;
-    padding: 5px 5px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 0.6em;
-    margin-left: 5px;
-    transition: background-color 0.3s ease;
+button.botaoExcluir {
+  background-color: #a34743;
+  color: #f4f0ea;
+  padding: 5px 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.6em;
+  margin-left: 5px;
+  transition: background-color 0.3s ease;
 }
 button.botaoExcluir:hover {
-    background-color: #60041A;
+  background-color: #60041a;
 }
 button.botaoEditar {
-    background-color: #331F19;
-    color: #F4F0EA;
-    padding: 5px 5px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 0.6em;
-    margin-left: 5px;
-    transition: background-color 0.3s ease;
+  background-color: #331f19;
+  color: #f4f0ea;
+  padding: 5px 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.6em;
+  margin-left: 5px;
+  transition: background-color 0.3s ease;
 }
 button.botaoEditar:hover {
-    background-color: #744d41;
+  background-color: #744d41;
 }
 
 .botao_lista {
-    background-color: #A34743;
+  background-color: #a34743;
 }
 
 .botao_lista:hover {
-    background-color: #60041A;
-    color: #F4F0EA;
+  background-color: #60041a;
+  color: #f4f0ea;
 }
- 
+.mensagem {
+  color: #010808;
+  font-size: 20px;
+  animation: mensagem 1s steps(1, end) 2;
+}
+@keyframes mensagem {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

@@ -4,13 +4,11 @@ function adicionarTarefa() {
   const inputTarefa = document.getElementById("inputTarefa");
   let tarefa = inputTarefa.value.trim();
 
-  const mensagem = document.getElementById("mensagem");
-
   if (tarefa == "") {
-    let mensagemErro = "Digite uma tarefa para adicioná-la a sua lista!";
+    let mensagemErro = "INFO: Digita uma tarefa para adicioná-la a sua lista!";
     mensagem.textContent = mensagemErro;
   } else {
-    let mensagemSucesso = "Tarefa adicionada com sucesso!";
+    let mensagemSucesso = "INFO: Tarefa adicionada com sucesso!";
     mensagem.textContent = mensagemSucesso;
     tarefas.push(tarefa);
     renderizarTarefas();
@@ -45,19 +43,24 @@ function renderizarTarefas() {
 function removerTarefa(i) {
   tarefas.splice(i, 1);
   renderizarTarefas();
+  const mensagem = document.getElementById("mensagem");
+  mensagem.textContent = "INFO: Tarefa removida com sucesso!";
+
 }
 
+
 function editarTarefa(i) {
-    let tarefaEditavel = prompt("edita a nova tarefa");
-    if (tarefaEditavel.trim() !== "") {
-        tarefas[i] = tarefaEditavel;
-        renderizarTarefas();
-        }
+  let tarefaEditavel = prompt("edita a nova tarefa");
+  if (tarefaEditavel.trim() !== "") {
+    tarefas[i] = tarefaEditavel;
+    renderizarTarefas();
+  }
 }
 
 function limparTarefas() {
   tarefas.length = 0;
   renderizarTarefas();
   const mensagem = document.getElementById("mensagem");
-  mensagem.textContent = "Lista de tarefas limpa!";
+  mensagem.textContent =
+    "INFO: todas as terefas foram removidas da lista com sucesso!";
 }
